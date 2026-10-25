@@ -1,0 +1,6 @@
+---
+layout: default
+title: Writing
+permalink: /writing/
+---
+<div class="wrap page"><h1>Writing</h1><p>Notes, essays, and reflections on scientific informatics and data stewardship.</p>{% for post in site.posts %}<article><p class="date">{{ post.date | date: '%B %-d, %Y' }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p></article>{% endfor %}</div>

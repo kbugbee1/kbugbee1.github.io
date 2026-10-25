@@ -1,0 +1,10 @@
+title: "Your Name"
+description: "Scientific informatics, data stewardship, and the stories behind discovery"
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: /writing/:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+exclude:
+  - README.md
