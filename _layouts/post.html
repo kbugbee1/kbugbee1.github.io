@@ -10,5 +10,6 @@ layout: default
     <time class="date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
   </header>
   <div class="article-body">{{ content }}</div>
+  {% include writing-references.html references=page.references %}
   <footer class="article-end"><a href="{{ '/writing/' | relative_url }}">← Return to Writing</a></footer>
 </article>

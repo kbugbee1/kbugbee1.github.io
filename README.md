@@ -66,8 +66,7 @@ The disclaimer appears in the footer of **every page**, with an expanded section
 
 The Writing page has two category-based sections. Add **one** of these categories
 in a post's front matter: `categories: [essays]` for long-form writing, or
-`categories: [reflections]` for reading notes. Posts in neither category remain
-accessible in “From the archive.” Existing post URLs retain the date-and-title
+`categories: [reflections]` for reading notes. Only categorized posts appear on the Writing page. Existing post URLs retain the date-and-title
 format configured in `_config.yml`; categories do not change that format.
 
 Use this front matter with your own text (this is a template, not an article):
@@ -84,14 +83,30 @@ featured_order: 1
 ---
 ```
 
-Featured essays appear before other essays. Use `featured: true` and a unique
+One featured essay appears prominently above the smaller essay cards. Use `featured: true` and a unique
 numeric `featured_order` on **every** featured essay; lower numbers appear first.
-Remove both fields to stop featuring an essay. Other essays and all reflections
+If several essays are marked featured, the lowest order wins; the others remain
+in the regular grid. Remove both fields to stop featuring an essay. Other essays and all reflections
 appear newest first. For a reading note use `categories: [reflections]` and omit
 the featured fields. Without `description`, listings use a shortened excerpt.
 Keep existing filenames and dates when categorizing existing posts to preserve
 URLs. Use Markdown headings starting at `##` within articles; the layout supplies
 the title. No JavaScript or additional Jekyll plugins are required.
+
+Reading notes can optionally cite one or more works. References appear below the
+description in the journal and below the article text. Supply a title and,
+optionally, an HTTPS URL:
+
+```yaml
+references:
+  - title: "Title and author of the paper or work"
+    url: "https://example.org/paper"
+  - title: "A print work without an online link"
+```
+
+The sample welcome post uses `published: false`, so normal Jekyll/GitHub Pages
+builds omit it from the homepage, Writing page, feed, and generated post pages.
+Do not use `--unpublished` for a publication build.
 
 ### Preview before publishing
 

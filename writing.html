@@ -7,7 +7,7 @@ permalink: /writing/
   <header class="writing-intro">
     <p class="eyebrow">Ideas · Inquiry · Perspective</p>
     <h1>Writing</h1>
-    <p class="lead">Essays and reading notes on scientific informatics, data stewardship, and the ideas behind discovery.</p>
+    <p class="lead">Essays, observations, and reflections on scientific informatics—the people, ideas, and practices that shape how scientific data and knowledge is created, preserved, and carried forward.</p>
     <nav class="writing-sections" aria-label="Writing sections">
       <a href="#essays">Essays <span aria-hidden="true">↓</span></a>
       <a href="#reflections">Reading &amp; Reflections <span aria-hidden="true">↓</span></a>
@@ -16,6 +16,7 @@ permalink: /writing/
 
   {% assign essays = site.posts | where_exp: 'post', 'post.categories contains "essays"' %}
   {% assign featured_essays = essays | where: 'featured', true | sort: 'featured_order' %}
+  {% assign featured_essay = featured_essays | first %}
   <section class="writing-section" id="essays" aria-labelledby="essays-heading">
     <div class="writing-section-intro">
       <p class="section-label">Long-form perspectives</p>
@@ -23,12 +24,12 @@ permalink: /writing/
       <p>Room to explore: substantial writing and research perspectives on science, information, and stewardship.</p>
     </div>
     {% if essays.size > 0 %}
+    {% if featured_essay %}
+      {% include essay-card.html post=featured_essay featured=true %}
+    {% endif %}
     <div class="essay-grid">
-      {% for post in featured_essays %}
-        {% include essay-card.html post=post featured=true %}
-      {% endfor %}
       {% for post in essays %}
-        {% unless post.featured == true %}{% include essay-card.html post=post %}{% endunless %}
+        {% unless post.url == featured_essay.url %}{% include essay-card.html post=post %}{% endunless %}
       {% endfor %}
     </div>
     {% else %}
@@ -52,6 +53,7 @@ permalink: /writing/
           <div>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
             <p>{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncatewords: 40 | escape }}</p>
+            {% include writing-references.html references=post.references %}
           </div>
         </article>
       </li>
@@ -62,15 +64,4 @@ permalink: /writing/
     {% endif %}
   </section>
 
-  {% assign uncategorized = site.posts | where_exp: 'post', 'post.categories contains "essays" or post.categories contains "reflections"' %}
-  {% if uncategorized.size < site.posts.size %}
-  <section class="writing-section writing-other" aria-labelledby="other-heading">
-    <h2 id="other-heading">From the archive</h2>
-    {% for post in site.posts %}
-      {% unless post.categories contains 'essays' or post.categories contains 'reflections' %}
-      <p><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <span class="date">· {{ post.date | date: '%B %-d, %Y' }}</span></p>
-      {% endunless %}
-    {% endfor %}
-  </section>
-  {% endif %}
 </div>

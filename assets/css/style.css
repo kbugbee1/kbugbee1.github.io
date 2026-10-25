@@ -163,7 +163,7 @@
 .writing-section-intro > p:last-child { color: var(--muted); }
 .essay-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .essay-card { padding: 30px; background: var(--surface); border: 1px solid var(--line); border-top: 2px solid var(--gold); }
-.essay-card-featured { grid-column: 1 / -1; padding: 36px; }
+.essay-card-featured { padding: 36px; margin-bottom: 24px; }
 .essay-card .section-label { margin-bottom: 18px; }
 .essay-card h3 { font-size: 29px; margin: 16px 0; }
 .essay-card-featured h3 { font-size: clamp(29px, 4vw, 39px); max-width: 750px; }
@@ -179,7 +179,10 @@
 .reflection-entry time { padding-top: 6px; }
 .reflection-entry h3 { font-size: 27px; margin: 0 0 12px; }
 .reflection-entry p { color: var(--muted); margin: 0; max-width: 65ch; }
-.writing-other h2 { font-size: 26px; }
+ .writing-references { margin: 18px 0 0; color: var(--muted); font-size: 13px; }
+.writing-references ul { margin: 6px 0 0; padding-left: 20px; }
+.writing-references li + li { margin-top: 6px; }
+.writing-references a { text-decoration: underline; text-underline-offset: .18em; overflow-wrap: anywhere; }
 .article-page { max-width: 800px; padding-top: 56px; padding-bottom: 88px; }
 .article-back { font-size: 13px; }
 .article-header { border-bottom: 1px solid var(--line); padding-bottom: 30px; margin-bottom: 36px; }
