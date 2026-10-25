@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><p class="eyebrow">Scientific informatics <span class="dot">·</span> Data stewardship <span class="dot">·</span> Open science</p><h1>The stories behind the science.</h2></h2>
+<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><p class="eyebrow">Scientific informatics <span class="dot">·</span> Data stewardship <span class="dot">·</span> Open science</p>
+  <h1>The stories behind the science.</h1>
+<p>
 Exploring the people, data, and ideas that shape scientific discovery—from the history of scientific data stewardship to the future of informatics.</p><a class="text-link" href="{{ '/about/' | relative_url }}">Explore my work <span aria-hidden="true">↗</span></a></div><div class="hero-art" aria-hidden="true"><img src="{{ '/assets/images/orbit-archive.svg' | relative_url }}" alt=""></div></div></section>
 <div class="wrap"><section class="section"><div class="section-heading"><div><p class="section-label">Notes from the field</p><h2>Recent writing</h2></div><a href="{{ '/writing/' | relative_url }}">All writing ↗</a></div><div class="post-grid">{% for post in site.posts limit:3 %}<article class="post-card"><p class="date">{{ post.date | date: '%B %-d, %Y' }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncatewords: 32 }}</p><a class="text-link" href="{{ post.url | relative_url }}">Read essay ↗</a></article>{% endfor %}</div></section>
 <section class="section activity-section"><div class="section-heading"><div><p class="section-label">Beyond the page</p><h2>Recent activity</h2></div></div><p class="intro-small">A space for selected talks, projects, events, and professional milestones.</p><div class="activity-placeholder"><span class="mini-orbit" aria-hidden="true">✧</span><p>Update this area in <code>index.html</code> when you have news to share.</p></div></section></div>
