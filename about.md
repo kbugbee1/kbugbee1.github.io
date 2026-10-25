@@ -46,12 +46,13 @@ permalink: /about/
 .about-page .about-record img {
   display: block;
   width: 100%;
-  max-width: 380px;
+  max-width: 420px;
   height: auto;
   opacity: 1;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 12px 35px rgba(35, 61, 80, 0.12);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
 }
 
 .about-page .about-record figcaption {
@@ -83,7 +84,7 @@ permalink: /about/
     </div>
     <figure class="about-orbit about-record">
       <img
-        src="{{ '/assets/images/golden-record-about.jpg' | relative_url }}"
+        src="{{ '/assets/images/golden-record-cutout.png' | relative_url }}"
         alt="The Sounds of Earth golden record photographed at the Library of Congress"
       >
       <figcaption>
