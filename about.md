@@ -80,6 +80,7 @@ permalink: /about/
       <p class="about-eyebrow">About · Scientific informatics · Open science</p>
       <h1 id="about-heading" class="about-title">The human side of scientific discovery.</h1>
       <p class="about-deck">I'm interested in what happens to scientific knowledge after the moment of discovery: how we preserve it, make sense of it, connect it to new questions, and carry it forward.</p>
+    </div>
     <figure class="about-orbit about-record">
       <img
         src="{{ '/assets/images/golden-record-about.jpg' | relative_url }}"
