@@ -1,50 +1,152 @@
 :root{--paper:#f8f6f0;--surface:#fffefa;--ink:#182d3d;--muted:#566674;--accent:#24657d;--gold:#b6976c;--line:#deded5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.wrap{max-width:1120px;margin:auto;padding:0 32px}.top{background:var(--surface);border-bottom:1px solid var(--line)}.nav{display:flex;justify-content:space-between;align-items:center;gap:28px;padding-top:23px;padding-bottom:23px}.brand{font-family:Georgia,serif;font-size:22px;color:var(--ink);font-weight:600}nav{display:flex;gap:25px;flex-wrap:wrap;font-size:13px}nav a{color:var(--ink)}main{min-height:65vh}.hero{background:linear-gradient(115deg,#f9f8f4,#f2f0e8);border-bottom:1px solid var(--line);overflow:hidden}.hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);align-items:center;min-height:560px}.hero-copy{padding:90px 0;position:relative;z-index:1}.eyebrow,.section-label{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);font-weight:700}.dot{color:var(--gold)}h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.16}h1{font-size:clamp(43px,5.1vw,67px);letter-spacing:-.025em;margin:24px 0;max-width:700px}.lead{font-size:19px;color:var(--muted);max-width:600px;line-height:1.7}.text-link{font-weight:650;font-size:14px}.hero-art{margin-right:-70px}.hero-art img{display:block;width:100%;max-width:590px;opacity:.96}.section{padding:70px 0;border-bottom:1px solid var(--line)}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:30px}.section-heading h2{margin:8px 0 0;font-size:39px}.section-heading>a{font-size:13px}.section-label{margin:0}.post-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.post-card{padding:26px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);min-height:250px}.post-card h3{font-size:25px;margin:12px 0}.post-card h3 a{color:var(--ink)}.post-card p:not(.date){color:var(--muted);font-size:14px}.date{font-size:12px;letter-spacing:.04em;color:var(--muted)}.intro-small{color:var(--muted)}.activity-placeholder{border:1px dashed #c8c6bb;padding:18px 24px;display:flex;gap:16px;align-items:center;color:var(--muted);font-size:14px}.mini-orbit{font-size:27px;color:var(--accent)}.page{max-width:800px;padding-top:72px;padding-bottom:95px}.page h1{font-size:clamp(39px,5vw,55px);margin:0 0 26px}.page h2{font-size:31px;margin-top:43px}.page p,.page li{color:#344554}.page article{padding:23px 0;border-bottom:1px solid var(--line)}.page article h3{font-size:26px;margin:6px 0}.site-footer{background:#182f3e;color:#e3e9e8;padding:47px 0}.footer-inner{display:flex;justify-content:space-between;gap:60px}.footer-kicker{font-family:Georgia,serif;font-size:19px;margin:0 0 16px}.disclaimer{font-size:12px;line-height:1.8;max-width:750px;color:#d1dadd}.fine-print{font-size:12px;color:#c4d0d5}.site-footer a{color:#d4e9ee}.footer-links{display:flex;gap:16px;white-space:nowrap;font-size:13px}code{background:#e8e7df;padding:2px 5px;border-radius:3px}@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-copy{padding:70px 0 15px}.hero-art{max-width:450px;margin:-65px -30px 0 auto;opacity:.65}.post-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.wrap{padding:0 22px}.nav{align-items:flex-start;flex-direction:column;gap:10px}.brand{font-size:21px}nav{gap:15px}.hero-copy{padding-top:55px}.hero-art{margin:-20px -25px -25px auto;max-width:330px}.post-grid{grid-template-columns:1fr}.section{padding:48px 0}.section-heading h2{font-size:32px}.footer-inner{flex-direction:column;gap:18px}.page{padding-top:52px}}
 
 
-/* Apollo homepage photograph */
-.hero-photo {
-  margin: 0 0 0 34px;
-  min-width: 0;
+/* ==========================================
+   APOLLO HOMEPAGE — ARCHIVAL BLENDED DESIGN
+   ========================================== */
+
+/* Give the homepage a little more breathing room */
+.hero {
+  overflow: hidden;
+  background: #f8f6f0;
 }
 
+.hero-grid {
+  align-items: center;
+  gap: 28px;
+}
+
+/* Keep the text above decorative elements */
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+/* Photograph container */
+.hero-photo {
+  position: relative;
+  margin: 0 -45px 0 -25px;
+  min-width: 0;
+  overflow: visible;
+}
+
+/* Feather the image edges into the background */
 .hero-photo img {
   display: block;
   width: 100%;
-  max-width: none;
-  height: 430px;
+  height: 510px;
   object-fit: cover;
-  object-position: 50% 48%;
-  opacity: 1;
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  box-shadow: 0 12px 28px rgba(24,45,61,.09);
+  object-position: center center;
+
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 0.93;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse 72% 66% at 55% 48%,
+    black 42%,
+    rgba(0,0,0,0.9) 59%,
+    rgba(0,0,0,0.35) 78%,
+    transparent 100%
+  );
+
+  mask-image: radial-gradient(
+    ellipse 72% 66% at 55% 48%,
+    black 42%,
+    rgba(0,0,0,0.9) 59%,
+    rgba(0,0,0,0.35) 78%,
+    transparent 100%
+  );
 }
 
+/* Fine orbital ring over the image */
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+
+  width: 82%;
+  height: 75%;
+  top: 9%;
+  left: 8%;
+
+  border: 1px solid rgba(172, 139, 94, 0.30);
+  border-radius: 50%;
+
+  transform: rotate(-24deg);
+  pointer-events: none;
+}
+
+/* Second, softer orbital line */
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+
+  width: 92%;
+  height: 48%;
+  top: 27%;
+  left: 2%;
+
+  border: 1px solid rgba(74, 119, 139, 0.22);
+  border-radius: 50%;
+
+  transform: rotate(29deg);
+  pointer-events: none;
+}
+
+/* Photo credit */
 .hero-photo figcaption {
-  font-size: 11px;
-  color: var(--muted);
-  margin-top: 9px;
+  position: relative;
+  z-index: 2;
+
+  margin-top: -5px;
+  padding-right: 28px;
+
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: #527487;
   text-align: right;
 }
 
+/* Responsive layout for tablets */
 @media (max-width: 820px) {
+
+  .hero-grid {
+    gap: 15px;
+  }
+
   .hero-photo {
-    margin: 0 0 45px;
-    max-width: 100%;
-    opacity: 1;
+    margin: 15px -15px 20px;
   }
 
   .hero-photo img {
-    height: 340px;
+    height: 380px;
+  }
+
+  .hero-photo figcaption {
+    padding-right: 15px;
   }
 }
 
+/* Responsive layout for phones */
 @media (max-width: 600px) {
+
   .hero-photo {
-    margin: 0 0 35px;
+    margin: 5px -10px 25px;
   }
 
   .hero-photo img {
-    height: 250px;
+    height: 300px;
+  }
+
+  .hero-photo figcaption {
+    font-size: 11px;
+    padding-right: 10px;
   }
 }
+
