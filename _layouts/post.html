@@ -1,4 +1,14 @@
 ---
 layout: default
 ---
-<div class="wrap page"><p class="eyebrow">Writing</p><h1>{{ page.title }}</h1><p class="date">{{ page.date | date: '%B %-d, %Y' }}</p>{{ content }}<p><a href="{{ '/writing/' | relative_url }}">← All writing</a></p></div>
+<article class="wrap article-page">
+  <header class="article-header">
+    <a class="article-back" href="{{ '/writing/' | relative_url }}">← All writing</a>
+    <p class="eyebrow">{% if page.categories contains 'essays' %}Essay{% elsif page.categories contains 'reflections' %}Reading &amp; Reflections{% else %}Writing{% endif %}</p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="lead">{{ page.description | escape }}</p>{% endif %}
+    <time class="date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
+  </header>
+  <div class="article-body">{{ content }}</div>
+  <footer class="article-end"><a href="{{ '/writing/' | relative_url }}">← Return to Writing</a></footer>
+</article>
