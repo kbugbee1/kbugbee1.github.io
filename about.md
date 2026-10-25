@@ -80,7 +80,8 @@ permalink: /about/
     <div>
       <p class="about-eyebrow">About · Scientific informatics · Open science</p>
       <h1 id="about-heading" class="about-title">The human side of scientific discovery.</h1>
-      <p class="about-deck">I'm interested in what happens to scientific knowledge after the moment of discovery: how we preserve it, make sense of it, connect it to new questions, and carry it forward.</p>
+      <p class="about-deck"> I'm fascinated by the life of scientific data beyond its first discoveries: how we preserve its meaning, uncover new connections, and enable future generations to explore questions we haven't yet imagined.
+      </p>
     </div>
     <figure class="about-orbit about-record">
       <img
@@ -96,8 +97,8 @@ permalink: /about/
   <section class="about-section" aria-labelledby="work-heading">
     <h2 id="work-heading">My work</h2>
     <div>
-      <p>I'm a scientific informatics and data stewardship professional working at NASA's Marshall Space Flight Center. My work focuses on the systems, practices, and collaborations that help scientists discover, understand, share, and reuse research data and other scientific outputs.</p>
-      <p>Across initiatives in open science, scientific information discovery, research repositories, and data governance, I've worked to connect technical capabilities with the needs of researchers and the responsibilities of long-term stewardship.</p>
+      <p>I'm a scientific informatics and data stewardship professional working at NASA's Marshall Space Flight Center. My work focuses on the systems, practices, and collaborations that help scientists discover, understand, share, and reuse space science data and other scientific outputs.</p>
+      <p>Across initiatives in open science, scientific information discovery, research repositories, data and metadata management, and data governance, I've worked to connect technical capabilities with the needs of scientists and the responsibilities of long-term stewardship.</p>
       <div class="about-tags" aria-label="Areas of focus">
         <span class="about-tag">Scientific informatics</span>
         <span class="about-tag">Data stewardship</span>
@@ -111,8 +112,10 @@ permalink: /about/
   <section class="about-section" aria-labelledby="perspective-heading">
     <h2 id="perspective-heading">What drives me</h2>
     <div>
-      <p>Scientific discovery is often told through missions, instruments, and breakthroughs. I'm equally interested in the work that makes those breakthroughs possible: documenting context, preserving evidence, building connections across disciplines, and ensuring that knowledge can be interpreted by people who weren't there when it was created.</p>
-      <div class="about-highlight"><p>Scientific data have a history, a context, and a future. Informatics helps connect all three.</p></div>
+      <p>Scientific breakthroughs rarely happen in isolation. Behind the missions and instruments are people whose work makes discovery possible: preserving data, documenting context, connecting knowledge, and ensuring that scientific information remains meaningful and useful long after its original purpose.
+      </p>
+      <div class="about-highlight"><p>Scientific data carry the evidence of yesterday's discoveries and the potential for tomorrow's. Informatics makes both possible.
+      </p></div>
       <p>I believe scientific informatics deserves recognition not simply as technical support, but as a discipline that shapes what researchers can discover—and what future generations can learn from today's science.</p>
     </div>
   </section>
@@ -120,7 +123,8 @@ permalink: /about/
   <section class="about-section" aria-labelledby="explore-heading">
     <h2 id="explore-heading">Explore further</h2>
     <div>
-      <p>This site is a place for independent writing, research perspectives, historical reflections, and conversations about the future of scientific informatics.</p>
+      <p>This site is a space to share my ongoing work, explore emerging ideas, reflect on the history of scientific informatics, and imagine what comes next.
+      </p>
       <nav class="about-links" aria-label="Explore more of this site">
         <a href="{{ '/publications/' | relative_url }}">Talks &amp; Publications ↗</a>
         <a href="{{ '/writing/' | relative_url }}">Writing ↗</a>
