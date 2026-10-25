@@ -90,7 +90,7 @@ permalink: /about/
     The Sounds of Earth · Photograph © Kaylin Bugbee
   </figcaption>
 </figure>
-  </section>
+</section>
 
   <section class="about-section" aria-labelledby="work-heading">
     <h2 id="work-heading">My work</h2>
