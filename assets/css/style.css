@@ -150,3 +150,63 @@
   }
 }
 
+
+/* Writing: editorial essays and a quieter chronological reading journal. */
+.writing-page { padding-top: 64px; padding-bottom: 88px; }
+.writing-intro { max-width: 760px; padding-bottom: 44px; }
+.writing-intro h1 { margin: 18px 0; }
+.writing-sections { gap: 12px 28px; margin-top: 28px; }
+.writing-sections a { color: var(--accent); border-bottom: 1px solid var(--gold); padding: 5px 0; }
+.writing-section { border-top: 1px solid var(--line); padding: 48px 0; scroll-margin-top: 24px; }
+.writing-section-intro { max-width: 670px; margin-bottom: 28px; }
+.writing-section h2 { font-size: clamp(30px, 4vw, 40px); margin: 10px 0 18px; }
+.writing-section-intro > p:last-child { color: var(--muted); }
+.essay-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.essay-card { padding: 30px; background: var(--surface); border: 1px solid var(--line); border-top: 2px solid var(--gold); }
+.essay-card-featured { padding: 36px; margin-bottom: 24px; }
+.essay-card .section-label { margin-bottom: 18px; }
+.essay-card h3 { font-size: 29px; margin: 16px 0; }
+.essay-card-featured h3 { font-size: clamp(29px, 4vw, 39px); max-width: 750px; }
+.essay-card h3 a, .reflection-entry h3 a { color: var(--ink); }
+.essay-card > p:not(.section-label) { color: var(--muted); max-width: 65ch; }
+.essay-card .text-link { display: inline-block; margin-top: 12px; }
+.writing-empty { color: var(--muted); padding: 28px; background: var(--surface); border: 1px solid var(--line); font-family: Georgia, serif; font-style: italic; }
+.journal-empty { background: transparent; border: 0; border-left: 2px solid var(--gold); }
+.reflection-list { list-style: none; padding: 0; margin: 0; }
+.reflection-list > li { border-top: 1px solid var(--line); }
+.reflection-list > li:last-child { border-bottom: 1px solid var(--line); }
+.reflection-entry { display: grid; grid-template-columns: 155px minmax(0, 1fr); gap: 28px; padding: 28px 0; }
+.reflection-entry time { padding-top: 6px; }
+.reflection-entry h3 { font-size: 27px; margin: 0 0 12px; }
+.reflection-entry p { color: var(--muted); margin: 0; max-width: 65ch; }
+ .writing-references { margin: 18px 0 0; color: var(--muted); font-size: 13px; }
+.writing-references ul { margin: 6px 0 0; padding-left: 20px; }
+.writing-references li + li { margin-top: 6px; }
+.writing-references a { text-decoration: underline; text-underline-offset: .18em; overflow-wrap: anywhere; }
+.article-page { max-width: 800px; padding-top: 56px; padding-bottom: 88px; }
+.article-back { font-size: 13px; }
+.article-header { border-bottom: 1px solid var(--line); padding-bottom: 30px; margin-bottom: 36px; }
+.article-header .eyebrow { margin-top: 32px; }
+.article-header h1 { font-size: clamp(36px, 5vw, 55px); overflow-wrap: anywhere; }
+.article-body { font-family: Georgia, 'Times New Roman', serif; font-size: 19px; line-height: 1.85; overflow-wrap: anywhere; }
+.article-body h2 { font-size: 32px; margin: 1.6em 0 .6em; }
+.article-body h3 { font-size: 26px; margin: 1.5em 0 .6em; }
+.article-body a { text-decoration: underline; text-underline-offset: .18em; }
+.article-body li + li { margin-top: .5em; }
+.article-body blockquote { margin: 30px 0; padding: 4px 24px; border-left: 2px solid var(--gold); color: var(--muted); }
+.article-body img, .article-body video { max-width: 100%; height: auto; }
+.article-body pre { max-width: 100%; overflow-x: auto; padding: 18px; background: var(--surface); font-size: 14px; }
+.article-body pre code { padding: 0; background: none; }
+.article-body table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: 16px; }
+.article-body th, .article-body td { padding: 10px; border: 1px solid var(--line); }
+.article-body hr { border: 0; border-top: 1px solid var(--line); margin: 36px 0; }
+.article-body :is(h2, h3, h4) { scroll-margin-top: 24px; }
+.article-end { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; }
+@media (max-width: 600px) {
+  .writing-page, .article-page { padding-top: 38px; padding-bottom: 56px; }
+  .writing-section { padding: 34px 0; }
+  .essay-grid { grid-template-columns: 1fr; }
+  .essay-card, .essay-card-featured { padding: 24px; }
+  .reflection-entry { grid-template-columns: 1fr; gap: 10px; }
+  .article-body { font-size: 18px; }
+}

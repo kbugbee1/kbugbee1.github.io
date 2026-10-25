@@ -1,0 +1,10 @@
+{% if include.references.size > 0 %}
+<div class="writing-references">
+  <span>Referenced works</span>
+  <ul>
+    {% for reference in include.references %}
+    <li>{% assign url_start = reference.url | slice: 0, 8 %}{% if url_start == 'https://' %}<a href="{{ reference.url | escape }}">{{ reference.title | escape }}</a>{% else %}{{ reference.title | escape }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

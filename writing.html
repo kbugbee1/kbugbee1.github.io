@@ -3,4 +3,65 @@ layout: default
 title: Writing
 permalink: /writing/
 ---
-<div class="wrap page"><h1>Writing</h1><p>Notes, essays, and reflections on scientific informatics and data stewardship.</p>{% for post in site.posts %}<article><p class="date">{{ post.date | date: '%B %-d, %Y' }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p></article>{% endfor %}</div>
+<div class="wrap writing-page">
+  <header class="writing-intro">
+    <p class="eyebrow">Ideas · Inquiry · Perspective</p>
+    <h1>Writing</h1>
+    <p class="lead">Essays, observations, and reflections on scientific informatics—the people, ideas, and practices that shape how scientific data and knowledge is created, preserved, and carried forward.</p>
+    <nav class="writing-sections" aria-label="Writing sections">
+      <a href="#essays">Essays <span aria-hidden="true">↓</span></a>
+      <a href="#reflections">Reading &amp; Reflections <span aria-hidden="true">↓</span></a>
+    </nav>
+  </header>
+
+  {% assign essays = site.posts | where_exp: 'post', 'post.categories contains "essays"' %}
+  {% assign featured_essays = essays | where: 'featured', true | sort: 'featured_order' %}
+  {% assign featured_essay = featured_essays | first %}
+  <section class="writing-section" id="essays" aria-labelledby="essays-heading">
+    <div class="writing-section-intro">
+      <p class="section-label">Long-form perspectives</p>
+      <h2 id="essays-heading">Essays</h2>
+      <p>Room to explore: substantial writing and research perspectives on science, information, and stewardship.</p>
+    </div>
+    {% if essays.size > 0 %}
+    {% if featured_essay %}
+      {% include essay-card.html post=featured_essay featured=true %}
+    {% endif %}
+    <div class="essay-grid">
+      {% for post in essays %}
+        {% unless post.url == featured_essay.url %}{% include essay-card.html post=post %}{% endunless %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="writing-empty">Essays will appear here as they are published.</p>
+    {% endif %}
+  </section>
+
+  {% assign reflections = site.posts | where_exp: 'post', 'post.categories contains "reflections"' %}
+  <section class="writing-section" id="reflections" aria-labelledby="reflections-heading">
+    <div class="writing-section-intro">
+      <p class="section-label">A reading journal</p>
+      <h2 id="reflections-heading">Reading &amp; Reflections</h2>
+      <p>Shorter notes on scientific papers, emerging concepts, and ideas worth returning to.</p>
+    </div>
+    {% if reflections.size > 0 %}
+    <ol class="reflection-list">
+      {% for post in reflections %}
+      <li>
+        <article class="reflection-entry">
+          <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+          <div>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+            <p>{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncatewords: 40 | escape }}</p>
+            {% include writing-references.html references=post.references %}
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p class="writing-empty journal-empty">Reading notes and reflections will appear here as they are published.</p>
+    {% endif %}
+  </section>
+
+</div>
