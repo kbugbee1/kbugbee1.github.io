@@ -31,6 +31,48 @@ permalink: /about/
   .about-page .about-orbit img { max-width: 230px; }
   .about-page .about-section { grid-template-columns: 1fr; gap: 15px; padding: 32px 0; }
 }
+  
+/* Golden Record photograph on About page */
+
+.about-page .about-record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+  min-width: 0;
+}
+
+.about-page .about-record img {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  opacity: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 35px rgba(35, 61, 80, 0.12);
+}
+
+.about-page .about-record figcaption {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #668398;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .about-page .about-record {
+    margin: 20px auto 10px;
+  }
+
+  .about-page .about-record img {
+    max-width: 300px;
+  }
+}
 </style>
 
 <div class="wrap about-page">
@@ -39,10 +81,15 @@ permalink: /about/
       <p class="about-eyebrow">About · Scientific informatics · Open science</p>
       <h1 id="about-heading" class="about-title">The human side of scientific discovery.</h1>
       <p class="about-deck">I'm interested in what happens to scientific knowledge after the moment of discovery: how we preserve it, make sense of it, connect it to new questions, and carry it forward.</p>
-    </div>
-    <div class="about-orbit" aria-hidden="true">
-      <img src="{{ '/assets/images/orbit-archive.svg' | relative_url }}" alt="">
-    </div>
+    <figure class="about-orbit about-record">
+  <img
+    src="{{ '/assets/images/golden-record-about.jpg' | relative_url }}"
+    alt="The Sounds of Earth golden record photographed at the Library of Congress"
+  >
+  <figcaption>
+    The Sounds of Earth · Photograph © Kaylin Bugbee
+  </figcaption>
+</figure>
   </section>
 
   <section class="about-section" aria-labelledby="work-heading">
