@@ -8,3 +8,6 @@ plugins:
   - jekyll-feed
 exclude:
   - README.md
+  - WRITING_WORKFLOW.md
+  - _templates
+  - _drafts/README.md
