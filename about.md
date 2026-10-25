@@ -31,8 +31,7 @@ permalink: /about/
   .about-page .about-orbit img { max-width: 230px; }
   .about-page .about-section { grid-template-columns: 1fr; gap: 15px; padding: 32px 0; }
 }
-  
-/* Golden Record photograph on About page */
+  /* Golden Record photograph on About page */
 
 .about-page .about-record {
   display: flex;
@@ -82,15 +81,15 @@ permalink: /about/
       <h1 id="about-heading" class="about-title">The human side of scientific discovery.</h1>
       <p class="about-deck">I'm interested in what happens to scientific knowledge after the moment of discovery: how we preserve it, make sense of it, connect it to new questions, and carry it forward.</p>
     <figure class="about-orbit about-record">
-  <img
-    src="{{ '/assets/images/golden-record-about.jpg' | relative_url }}"
-    alt="The Sounds of Earth golden record photographed at the Library of Congress"
-  >
-  <figcaption>
-    The Sounds of Earth · Photograph © Kaylin Bugbee
-  </figcaption>
-</figure>
-</section>
+      <img
+        src="{{ '/assets/images/golden-record-about.jpg' | relative_url }}"
+        alt="The Sounds of Earth golden record photographed at the Library of Congress"
+      >
+      <figcaption>
+      The Sounds of Earth · Photograph © Kaylin Bugbee
+      </figcaption>
+    </figure>
+  </section>
 
   <section class="about-section" aria-labelledby="work-heading">
     <h2 id="work-heading">My work</h2>
